@@ -12,7 +12,7 @@ Trabajo práctico para la materia Fundamentos del Desarrollo del Software y Meto
 
 El proyecto se gestiona con Scrum porque los requisitos no están cerrados desde el principio y van cambiando según el feedback semanal de los usuarios beta. Trabajamos en sprints de una a dos semanas, y al final de cada uno hay una versión funcionando que se puede probar.
 
-El esfuerzo de cada tarea se estima en Story Points mediante Planning Poker, usando la escala de Fibonacci (1, 2, 3, 5, 8, 13). Las estimaciones se revisan en cada sprint según la velocidad real del equipo, por lo que se adaptan a los cambios de requisitos sin tener que rehacer toda la planificación.
+El esfuerzo de cada tarea se estima en Story Points mediante Planning Poker. Las estimaciones se revisan en cada sprint según la velocidad real del equipo, por lo que se adaptan a los cambios de requisitos sin tener que rehacer toda la planificación.
 
 ## Product Backlog
 
@@ -147,10 +147,10 @@ npm test
 
 | Integrante | Rol |
 |---|---|
-| faltaria esto muchachos | Scrum Master |
-| faltaria esto muchachos | Product Owner |
-| faltaria esto muchachos | Desarrollador |
-| faltaria esto muchachos | Tester |
+| Ignacio Lopez Salomon | Scrum Master |
+| Santiago Zuccaro | Product Owner |
+| Matías Escalada | Desarrollador |
+| Santino De Santis | Tester |
 
 Tablero de Trello: [PilarBus en Trello](https://trello.com/b/sxszQVsW/pilarbus)
 
