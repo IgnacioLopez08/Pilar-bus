@@ -20,11 +20,11 @@ Cada fila corresponde a una tarjeta del [tablero de Trello](https://trello.com/b
 
 | Historia | Descripción | Story Points | Sprint | Roles | Estado |
 |---|---|---|---|---|---|
-| CI/CD | Pipeline para desplegar sin cortes de servicio | 5 | 1 | DevOps, Scrum Master | En proceso |
+| CI/CD | Pipeline para desplegar sin cortes de servicio | 5 | 1 | DevOps, Scrum Master | Verificación |
 | Registro e inicio de sesión | Creación de cuenta y acceso de usuarios | 5 | 1 | Backend, Mobile, Tester | Hecho |
-| Sistema de reclamos | Reclamos con foto y ubicación | 5 | 1 | Backend, Mobile, Tester | Por hacer |
+| Sistema de reclamos | Reclamos con foto y ubicación | 5 | 1 | Backend, Mobile, Tester | Hecho |
 | Mapa con colectivos en tiempo real | Ubicación de cada colectivo en el mapa | 13 | 2 | Backend, Mobile, Tester | En proceso |
-| Búsqueda de líneas y paradas | Consulta de recorridos y paradas | 3 | 2 | Mobile, Tester | Por hacer |
+| Búsqueda de líneas y paradas | Consulta de recorridos y paradas | 3 | 2 | Mobile, Tester | En proceso |
 | Alertas de desvíos | Avisos ante cortes, obras o cambios de recorrido | 8 | 3 | Backend, Mobile, Tester | Por hacer |
 | Plataforma web | Consulta de recorridos desde la web | 8 | 3 | Web, Tester | En proceso |
 | Integración con SUBE | Consulta de saldo y últimos viajes | 13 | 4 | Backend, Tester, Scrum Master | Por hacer |
@@ -53,7 +53,7 @@ El tablero de Trello tiene cuatro columnas:
 |---|---|
 | Por hacer | Tareas del backlog que todavía no se empezaron |
 | En proceso | Tareas en las que alguien está trabajando |
-| Verificación | Tareas terminadas que esperan revisión: el Pull Request tiene que pasar el pipeline y ser aprobado por otro integrante |  
+| Verificación | Tareas terminadas que esperan revisión: el Pull Request tiene que pasar el pipeline y ser aprobado por otro integrante |
 | Hecho | Tareas terminadas y probadas |
 
 La columna "En proceso" tiene un límite WIP (Work In Progress) de 3 tareas. Mientras haya 3 tareas en curso, nadie empieza una nueva hasta terminar alguna. Esto evita que se acumule trabajo a medio hacer y hace que los bloqueos se vean enseguida, porque una tarea trabada frena al resto del equipo y obliga a resolverla.
@@ -71,7 +71,7 @@ No se sube código directamente a `main`. Todo cambio entra a través de un Pull
 5. Al menos otro integrante del equipo revisa el código y lo aprueba.
 6. Se hace el merge solamente si el pipeline pasó y el PR fue aprobado.
 
-Cuando se abre el PR, la tarjeta pasa a "En proceso". Cuando se mergea, pasa a "Hecho".
+Mientras se trabaja en la rama, la tarjeta está en "En proceso". Cuando se abre el PR, pasa a "Verificación". Cuando se mergea, pasa a "Hecho".
 
 De esta forma ningún cambio llega a `main` sin compilar y sin pasar los tests, cada cambio queda registrado con su revisión, y `main` se mantiene siempre en un estado que se puede desplegar.
 
