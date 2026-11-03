@@ -10,27 +10,27 @@ Trabajo práctico para la materia Fundamentos del Desarrollo del Software y Meto
 
 ## Metodología
 
-El proyecto se gestiona con Scrum porque los requisitos no están cerrados desde el principio y van cambiando según el feedback semanal de los usuarios beta. Trabajamos en sprints de una a dos semanas, y al final de cada uno hay una versión funcionando que se puede probar.
+El proyecto se gestiona con Scrum porque los requisitos no están cerrados desde el principio y van cambiando según el feedback semanal de los usuarios beta. Trabajamos en sprints de 2 semanas, y al final de cada uno hay una versión funcionando que se prueba con los usuarios beta. El Product Owner es un representante de la Municipalidad y la Universidad.
 
-El esfuerzo de cada tarea se estima en Story Points mediante Planning Poker. Las estimaciones se revisan en cada sprint según la velocidad real del equipo, por lo que se adaptan a los cambios de requisitos sin tener que rehacer toda la planificación.
+El esfuerzo de cada historia se estima en Story Points. Las estimaciones se revisan en cada Sprint Planning según la velocidad real del equipo, por lo que se adaptan a los cambios de requisitos sin tener que rehacer toda la planificación.
 
 ## Product Backlog
 
 Cada fila corresponde a una tarjeta del [tablero de Trello](https://trello.com/b/sxszQVsW/pilarbus). El estado se actualiza a medida que las tarjetas avanzan en el tablero.
 
-| Tarea | Descripción | Story Points | Roles | Estado |
-|---|---|---|---|---|
-| Sistema de reclamos | Reportes de pasajeros con seguimiento del estado | 5 | Backend, Mobile, Tester | Hecho |
-| Registro e inicio de sesión | Creación de cuenta y acceso de usuarios | 5 | Backend, Mobile, Tester | Por hacer |
-| CI/CD | Pipeline de build, test y deploy automático | 3 | DevOps, Scrum Master | Por hacer |
-| Mapa con colectivos en tiempo real | Ubicación de cada colectivo en el mapa | 13 | Backend, Mobile, Tester | Por hacer |
-| Búsqueda de líneas y paradas | Consulta de recorridos y paradas | 5 | Backend, Mobile | Por hacer |
-| Alertas de desvíos | Avisos ante cortes, obras o cambios de recorrido | 8 | Backend, Mobile, Tester | Por hacer |
-| Plataforma web | Versión web de la aplicación | 8 | Frontend, Tester | Por hacer |
-| Integración con SUBE | Consulta de saldo y últimos viajes | 13 | Backend, Tester | Por hacer |
-| **Total** | | **60** | | |
+| Historia | Descripción | Story Points | Sprint | Roles | Estado |
+|---|---|---|---|---|---|
+| CI/CD | Pipeline para desplegar sin cortes de servicio | 5 | 1 | DevOps, Scrum Master | En proceso |
+| Registro e inicio de sesión | Creación de cuenta y acceso de usuarios | 5 | 1 | Backend, Mobile, Tester | Hecho |
+| Sistema de reclamos | Reclamos con foto y ubicación | 5 | 1 | Backend, Mobile, Tester | Por hacer |
+| Mapa con colectivos en tiempo real | Ubicación de cada colectivo en el mapa | 13 | 2 | Backend, Mobile, Tester | En proceso |
+| Búsqueda de líneas y paradas | Consulta de recorridos y paradas | 3 | 2 | Mobile, Tester | Por hacer |
+| Alertas de desvíos | Avisos ante cortes, obras o cambios de recorrido | 8 | 3 | Backend, Mobile, Tester | Por hacer |
+| Plataforma web | Consulta de recorridos desde la web | 8 | 3 | Web, Tester | En proceso |
+| Integración con SUBE | Consulta de saldo y últimos viajes | 13 | 4 | Backend, Tester, Scrum Master | Por hacer |
+| **Total** | | **60** | | | |
 
-Las tareas de 13 puntos (mapa en tiempo real e integración con SUBE) son las de mayor incertidumbre. Antes de entrar a un sprint se dividen en historias más chicas.
+Con una velocidad inicial de 15 puntos por sprint, el backlog se completa en 4 sprints (8 semanas). La integración con SUBE queda para el último sprint a propósito: es la historia más incierta, porque depende de un convenio para acceder a sus datos, y así hay tiempo para gestionarlo.
 
 ### Subtareas
 
@@ -47,12 +47,13 @@ Cada tarjeta de Trello tiene un checklist con sus subtareas:
 
 ## Tablero Kanban
 
-El tablero de Trello tiene tres columnas:
+El tablero de Trello tiene cuatro columnas:
 
 | Columna | Significado |
 |---|---|
 | Por hacer | Tareas del backlog que todavía no se empezaron |
 | En proceso | Tareas en las que alguien está trabajando |
+| Verificación | Tareas terminadas que esperan revisión: el Pull Request tiene que pasar el pipeline y ser aprobado por otro integrante |  
 | Hecho | Tareas terminadas y probadas |
 
 La columna "En proceso" tiene un límite WIP (Work In Progress) de 3 tareas. Mientras haya 3 tareas en curso, nadie empieza una nueva hasta terminar alguna. Esto evita que se acumule trabajo a medio hacer y hace que los bloqueos se vean enseguida, porque una tarea trabada frena al resto del equipo y obliga a resolverla.
@@ -147,10 +148,10 @@ npm test
 
 | Integrante | Rol |
 |---|---|
-| Ignacio Lopez Salomon | Scrum Master |
-| Santiago Zuccaro | Product Owner |
-| Matías Escalada | Desarrollador |
-| Santino De Santis | Tester |
+| Santino De Santis | Scrum Master y DevOps |
+| Santiago Zuccaro | Desarrollador Backend |
+| Matías Escalada | Desarrollador Mobile y Web |
+| Ignacio Lopez Salomon | Tester (QA) |
 
 Tablero de Trello: [PilarBus en Trello](https://trello.com/b/sxszQVsW/pilarbus)
 
